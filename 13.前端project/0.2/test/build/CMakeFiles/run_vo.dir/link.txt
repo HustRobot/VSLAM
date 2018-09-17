@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/run_vo.dir/run_vo.cpp.o  -o run_vo -rdynamic -lmyslam 

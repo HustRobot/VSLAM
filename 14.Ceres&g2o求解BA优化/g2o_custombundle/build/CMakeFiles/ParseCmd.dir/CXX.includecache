@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/will/Desktop/vslam/项目代码/14.Ceres&g2o求解BA优化/g2o_custombundle/common/flags/command_args.cpp
+command_args.h
+/home/will/Desktop/vslam/项目代码/14.Ceres&g2o求解BA优化/g2o_custombundle/common/flags/command_args.h
+cstdlib
+-
+cstring
+-
+fstream
+-
+algorithm
+-
+functional
+-
+
+/home/will/Desktop/vslam/项目代码/14.Ceres&g2o求解BA优化/g2o_custombundle/common/flags/command_args.h
+string
+-
+vector
+-
+iostream
+-
+sstream
+-
+

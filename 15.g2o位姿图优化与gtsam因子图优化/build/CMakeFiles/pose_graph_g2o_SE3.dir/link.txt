@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -O3 -O3 -DNDEBUG   CMakeFiles/pose_graph_g2o_SE3.dir/pose_graph_g2o_SE3.cpp.o  -o pose_graph_g2o_SE3 -rdynamic -lg2o_core -lg2o_stuff -lg2o_types_slam3d -lcholmod -lamd -lcolamd -lcamd -lccolamd /usr/local/lib/libmetis.so -lsuitesparseconfig -Wl,-rpath,/usr/local/lib 
