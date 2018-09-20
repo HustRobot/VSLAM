@@ -176,14 +176,14 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
 6. P99 安装PCL点云库
    ```shell
    书中的安装或许有问题，请参照下列方法
-
+   
    1、下载PCL源代码
    $ git clone https://github.com/PointCloudLibrary/pcl.git 
    或者直接去https://github.com/PointCloudLibrary/pcl.git网页下载。
-
+   
    2、安装依赖库
    $ apt-get install cmake g++   libboost1.58-all-dev libeigen3-dev libflann-dev python libusb-1.0-0-dev libudev-dev freeglut3-dev doxygen graphviz libpng12-dev libgtest-dev libxmu-dev libxi-dev libpcap-dev libqhull-dev libvtk5-qt4-dev python-vtk libvtk-java
-
+   
    3、编译安装
    编译时间非常长，可能1小时内结束不了，编译前请考虑清楚。线程数根据情况选择
    $ cd pcl
@@ -223,6 +223,9 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
    [警告】是否会影响到ROS？未知！
    =======================solved===============================
    详情见日志/安装PCL点云库依赖出错记录日志.txt
+   
+   ===================20180920更新 Sunnie=======================
+   不安装libvtk5-qt4-dev依赖仍可正常编译运行生成点云的程序
    ```
 
 
@@ -278,6 +281,8 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
   安装g2o的时候g2o_viewer组件已安装。
   可能出现的错误：运行g2o_viewer之后报错：(core dumped)
   尚未解决
+  =====================20180920更新 Sunnie============================
+  依说明安装g2o后可正常运行g2o_viewer
   ```
 
 
@@ -314,10 +319,10 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
 
     ```shell
     sudo apt-get install doxygen
-
+    
     cd ~/src
     git clone https://github.com/Octomap/octomap.git
-
+    
     cd octomap
     mkdir build
     cd build
@@ -339,9 +344,16 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
     因为libqglviewer-dev-qt4和libqglviewer-dev只能存在一个，但libqglviewer-dev-qt4并不能支持g2o。安装回libqglviewer-dev是不会影响octovis的使用的，因为它影响的只是OctoMap的编译安装。
     #-------------------参考-------------------#
     http://www.cnblogs.com/hitlrk/p/6667253.html
-
+    
     上述方法依旧无法解决！
     =======================unsolved===============================
+    
+    =====================20180919更新 Sunnie=======================
+    同样报错：已放弃（核心已转储）
+    也无法解决。
+    =====================20180920更新 Sunnie=======================
+    将之前下载的octomap文件夹全部删除后，重新从github上下载编译安装，最终成功运行。
+    以及，暂未重装libqglviewer-dev依赖，但似乎未影响g2o运行。
     ```
 
 
