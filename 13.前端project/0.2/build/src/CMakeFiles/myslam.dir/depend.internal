@@ -6,6 +6,8 @@ src/CMakeFiles/myslam.dir/camera.cpp.o
  ../include/myslam/common_include.h
  ../include/myslam/config.h
  /home/will/code/vslam/项目代码/13.前端project/0.2/src/camera.cpp
+ /home/will/src/Sophus/sophus/se3.h
+ /home/will/src/Sophus/sophus/so3.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -145,6 +147,7 @@ src/CMakeFiles/myslam.dir/camera.cpp.o
  /usr/include/eigen3/Eigen/LU
  /usr/include/eigen3/Eigen/QR
  /usr/include/eigen3/Eigen/SVD
+ /usr/include/eigen3/Eigen/StdVector
  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -301,6 +304,8 @@ src/CMakeFiles/myslam.dir/camera.cpp.o
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
  /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+ /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+ /usr/include/eigen3/Eigen/src/StlSupport/details.h
  /usr/include/eigen3/Eigen/src/misc/Image.h
  /usr/include/eigen3/Eigen/src/misc/Kernel.h
  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -314,6 +319,8 @@ src/CMakeFiles/myslam.dir/config.cpp.o
  ../include/myslam/common_include.h
  ../include/myslam/config.h
  /home/will/code/vslam/项目代码/13.前端project/0.2/src/config.cpp
+ /home/will/src/Sophus/sophus/se3.h
+ /home/will/src/Sophus/sophus/so3.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -453,6 +460,7 @@ src/CMakeFiles/myslam.dir/config.cpp.o
  /usr/include/eigen3/Eigen/LU
  /usr/include/eigen3/Eigen/QR
  /usr/include/eigen3/Eigen/SVD
+ /usr/include/eigen3/Eigen/StdVector
  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -609,6 +617,8 @@ src/CMakeFiles/myslam.dir/config.cpp.o
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
  /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+ /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+ /usr/include/eigen3/Eigen/src/StlSupport/details.h
  /usr/include/eigen3/Eigen/src/misc/Image.h
  /usr/include/eigen3/Eigen/src/misc/Kernel.h
  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -623,6 +633,8 @@ src/CMakeFiles/myslam.dir/frame.cpp.o
  ../include/myslam/common_include.h
  ../include/myslam/frame.h
  /home/will/code/vslam/项目代码/13.前端project/0.2/src/frame.cpp
+ /home/will/src/Sophus/sophus/se3.h
+ /home/will/src/Sophus/sophus/so3.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -762,6 +774,7 @@ src/CMakeFiles/myslam.dir/frame.cpp.o
  /usr/include/eigen3/Eigen/LU
  /usr/include/eigen3/Eigen/QR
  /usr/include/eigen3/Eigen/SVD
+ /usr/include/eigen3/Eigen/StdVector
  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -918,6 +931,8 @@ src/CMakeFiles/myslam.dir/frame.cpp.o
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
  /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+ /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+ /usr/include/eigen3/Eigen/src/StlSupport/details.h
  /usr/include/eigen3/Eigen/src/misc/Image.h
  /usr/include/eigen3/Eigen/src/misc/Kernel.h
  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -934,6 +949,8 @@ src/CMakeFiles/myslam.dir/map.cpp.o
  ../include/myslam/map.h
  ../include/myslam/mappoint.h
  /home/will/code/vslam/项目代码/13.前端project/0.2/src/map.cpp
+ /home/will/src/Sophus/sophus/se3.h
+ /home/will/src/Sophus/sophus/so3.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -1073,6 +1090,7 @@ src/CMakeFiles/myslam.dir/map.cpp.o
  /usr/include/eigen3/Eigen/LU
  /usr/include/eigen3/Eigen/QR
  /usr/include/eigen3/Eigen/SVD
+ /usr/include/eigen3/Eigen/StdVector
  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -1229,6 +1247,8 @@ src/CMakeFiles/myslam.dir/map.cpp.o
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
  /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+ /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+ /usr/include/eigen3/Eigen/src/StlSupport/details.h
  /usr/include/eigen3/Eigen/src/misc/Image.h
  /usr/include/eigen3/Eigen/src/misc/Kernel.h
  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -1242,6 +1262,8 @@ src/CMakeFiles/myslam.dir/mappoint.cpp.o
  ../include/myslam/common_include.h
  ../include/myslam/mappoint.h
  /home/will/code/vslam/项目代码/13.前端project/0.2/src/mappoint.cpp
+ /home/will/src/Sophus/sophus/se3.h
+ /home/will/src/Sophus/sophus/so3.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -1381,6 +1403,7 @@ src/CMakeFiles/myslam.dir/mappoint.cpp.o
  /usr/include/eigen3/Eigen/LU
  /usr/include/eigen3/Eigen/QR
  /usr/include/eigen3/Eigen/SVD
+ /usr/include/eigen3/Eigen/StdVector
  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -1537,6 +1560,8 @@ src/CMakeFiles/myslam.dir/mappoint.cpp.o
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
  /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+ /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+ /usr/include/eigen3/Eigen/src/StlSupport/details.h
  /usr/include/eigen3/Eigen/src/misc/Image.h
  /usr/include/eigen3/Eigen/src/misc/Kernel.h
  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -1555,6 +1580,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o
  ../include/myslam/mappoint.h
  ../include/myslam/visual_odometry.h
  /home/will/code/vslam/项目代码/13.前端project/0.2/src/visual_odometry.cpp
+ /home/will/src/Sophus/sophus/se3.h
+ /home/will/src/Sophus/sophus/so3.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d.hpp
@@ -1698,6 +1725,7 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o
  /usr/include/eigen3/Eigen/LU
  /usr/include/eigen3/Eigen/QR
  /usr/include/eigen3/Eigen/SVD
+ /usr/include/eigen3/Eigen/StdVector
  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -1854,6 +1882,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
  /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+ /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+ /usr/include/eigen3/Eigen/src/StlSupport/details.h
  /usr/include/eigen3/Eigen/src/misc/Image.h
  /usr/include/eigen3/Eigen/src/misc/Kernel.h
  /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h

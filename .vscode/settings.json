@@ -58,6 +58,7 @@
         "valarray": "cpp",
         "core": "cpp",
         "sparsecore": "cpp",
-        "climits": "cpp"
+        "climits": "cpp",
+        "dense": "cpp"
     }
 }

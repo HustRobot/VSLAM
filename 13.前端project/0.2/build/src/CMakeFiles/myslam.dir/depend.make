@@ -5,6 +5,8 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: ../include/myslam/camera.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: ../include/myslam/common_include.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: ../include/myslam/config.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: ../src/camera.cpp
+src/CMakeFiles/myslam.dir/camera.cpp.o: /home/will/src/Sophus/sophus/se3.h
+src/CMakeFiles/myslam.dir/camera.cpp.o: /home/will/src/Sophus/sophus/so3.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
 src/CMakeFiles/myslam.dir/camera.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -144,6 +146,7 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/Jacobi
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/LU
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/QR
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/SVD
+src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/StdVector
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -300,6 +303,8 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/SVD/Jacobi
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/details.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/misc/Image.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/misc/Kernel.h
 src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -313,6 +318,8 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: /usr/include/eigen3/Eigen/src/plugins/Ma
 src/CMakeFiles/myslam.dir/config.cpp.o: ../include/myslam/common_include.h
 src/CMakeFiles/myslam.dir/config.cpp.o: ../include/myslam/config.h
 src/CMakeFiles/myslam.dir/config.cpp.o: ../src/config.cpp
+src/CMakeFiles/myslam.dir/config.cpp.o: /home/will/src/Sophus/sophus/se3.h
+src/CMakeFiles/myslam.dir/config.cpp.o: /home/will/src/Sophus/sophus/so3.h
 src/CMakeFiles/myslam.dir/config.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
 src/CMakeFiles/myslam.dir/config.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
 src/CMakeFiles/myslam.dir/config.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -452,6 +459,7 @@ src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/Jacobi
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/LU
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/QR
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/SVD
+src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/StdVector
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -608,6 +616,8 @@ src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/SVD/Jacobi
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/details.h
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/misc/Image.h
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/misc/Kernel.h
 src/CMakeFiles/myslam.dir/config.cpp.o: /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -622,6 +632,8 @@ src/CMakeFiles/myslam.dir/frame.cpp.o: ../include/myslam/camera.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: ../include/myslam/common_include.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: ../include/myslam/frame.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: ../src/frame.cpp
+src/CMakeFiles/myslam.dir/frame.cpp.o: /home/will/src/Sophus/sophus/se3.h
+src/CMakeFiles/myslam.dir/frame.cpp.o: /home/will/src/Sophus/sophus/so3.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
 src/CMakeFiles/myslam.dir/frame.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -761,6 +773,7 @@ src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/Jacobi
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/LU
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/QR
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/SVD
+src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/StdVector
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -917,6 +930,8 @@ src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/SVD/JacobiS
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/details.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/misc/Image.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/misc/Kernel.h
 src/CMakeFiles/myslam.dir/frame.cpp.o: /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -933,6 +948,8 @@ src/CMakeFiles/myslam.dir/map.cpp.o: ../include/myslam/frame.h
 src/CMakeFiles/myslam.dir/map.cpp.o: ../include/myslam/map.h
 src/CMakeFiles/myslam.dir/map.cpp.o: ../include/myslam/mappoint.h
 src/CMakeFiles/myslam.dir/map.cpp.o: ../src/map.cpp
+src/CMakeFiles/myslam.dir/map.cpp.o: /home/will/src/Sophus/sophus/se3.h
+src/CMakeFiles/myslam.dir/map.cpp.o: /home/will/src/Sophus/sophus/so3.h
 src/CMakeFiles/myslam.dir/map.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
 src/CMakeFiles/myslam.dir/map.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
 src/CMakeFiles/myslam.dir/map.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -1072,6 +1089,7 @@ src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/Jacobi
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/LU
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/QR
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/SVD
+src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/StdVector
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -1228,6 +1246,8 @@ src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/SVD/JacobiSVD
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/details.h
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/misc/Image.h
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/misc/Kernel.h
 src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -1241,6 +1261,8 @@ src/CMakeFiles/myslam.dir/map.cpp.o: /usr/include/eigen3/Eigen/src/plugins/Matri
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: ../include/myslam/common_include.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: ../include/myslam/mappoint.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: ../src/mappoint.cpp
+src/CMakeFiles/myslam.dir/mappoint.cpp.o: /home/will/src/Sophus/sophus/se3.h
+src/CMakeFiles/myslam.dir/mappoint.cpp.o: /home/will/src/Sophus/sophus/so3.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -1380,6 +1402,7 @@ src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/Jacobi
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/LU
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/QR
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/SVD
+src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/StdVector
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -1536,6 +1559,8 @@ src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/SVD/Jaco
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/details.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/misc/Image.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/misc/Kernel.h
 src/CMakeFiles/myslam.dir/mappoint.cpp.o: /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
@@ -1554,6 +1579,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../include/myslam/map.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../include/myslam/mappoint.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../include/myslam/visual_odometry.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp
+src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /home/will/src/Sophus/sophus/se3.h
+src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /home/will/src/Sophus/sophus/so3.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d.hpp
@@ -1697,6 +1724,7 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/Jacob
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/LU
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/QR
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/SVD
+src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/StdVector
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
@@ -1853,6 +1881,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/S
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/StlSupport/details.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/misc/Image.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/misc/Kernel.h
 src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h

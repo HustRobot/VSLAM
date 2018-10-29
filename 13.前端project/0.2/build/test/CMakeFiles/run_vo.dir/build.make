@@ -136,6 +136,7 @@ run_vo_EXTERNAL_OBJECTS =
 ../bin/run_vo: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
 ../bin/run_vo: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 ../bin/run_vo: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
+../bin/run_vo: /home/will/src/Sophus/build/libSophus.so
 ../bin/run_vo: test/CMakeFiles/run_vo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/will/code/vslam/项目代码/13.前端project/0.2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/run_vo"
 	cd /home/will/code/vslam/项目代码/13.前端project/0.2/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run_vo.dir/link.txt --verbose=$(VERBOSE)

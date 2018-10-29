@@ -66,45 +66,21 @@ myslam/map.h
 opencv2/features2d/features2d.hpp
 -
 
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/camera.cpp
-myslam/camera.h
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/myslam/camera.h
-myslam/config.h
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/myslam/config.h
-
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/config.cpp
-myslam/config.h
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/myslam/config.h
-
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/frame.cpp
-myslam/frame.h
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/myslam/frame.h
-
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/map.cpp
-myslam/map.h
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/myslam/map.h
-
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/mappoint.cpp
-myslam/common_include.h
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/myslam/common_include.h
-myslam/mappoint.h
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/myslam/mappoint.h
-
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/visual_odometry.cpp
-opencv2/highgui/highgui.hpp
--
-opencv2/imgproc/imgproc.hpp
--
-opencv2/calib3d/calib3d.hpp
--
-algorithm
+/home/will/code/vslam/项目代码/13.前端project/0.2/test/run_vo.cpp
+fstream
 -
 boost/timer.hpp
 -
+opencv2/imgcodecs.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/viz.hpp
+-
 myslam/config.h
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/myslam/config.h
+/home/will/code/vslam/项目代码/13.前端project/0.2/test/myslam/config.h
 myslam/visual_odometry.h
-/home/will/code/vslam/项目代码/13.前端project/0.2/src/myslam/visual_odometry.h
+/home/will/code/vslam/项目代码/13.前端project/0.2/test/myslam/visual_odometry.h
 
 /home/will/src/Sophus/sophus/se3.h
 so3.h
@@ -131,10 +107,6 @@ opencv2/core/affine.hpp
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/opencv2/core/affine.hpp
 opencv2/calib3d/calib3d_c.h
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/opencv2/calib3d/calib3d_c.h
-
-/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d.hpp
-opencv2/calib3d.hpp
-/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/opencv2/calib3d.hpp
 
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
 opencv2/core/core_c.h
@@ -963,10 +935,6 @@ opencv2/highgui.hpp
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/opencv2/highgui.hpp
 opencv2/imgproc/imgproc_c.h
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/opencv2/imgproc/imgproc_c.h
-
-/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/imgproc/imgproc.hpp
-opencv2/imgproc.hpp
-/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/imgproc/opencv2/imgproc.hpp
 
 /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/imgproc/imgproc_c.h
 opencv2/imgproc/types_c.h

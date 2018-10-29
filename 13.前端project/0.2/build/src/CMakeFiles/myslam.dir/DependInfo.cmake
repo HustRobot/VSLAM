@@ -18,7 +18,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/eigen3"
   "/opt/ros/kinetic/include/opencv-3.3.1-dev"
   "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
-  "/home/will/code/ros/catkin_ws/src/lsd_slam-YaoZhiwen/lsd_slam_viewer/thirdparty/Sophus"
+  "/home/will/src/Sophus"
   "../include"
   )
 
