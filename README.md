@@ -305,7 +305,6 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
     cd build
     cmake ..
     make -j4
-    sudo make install
     ```
 
 

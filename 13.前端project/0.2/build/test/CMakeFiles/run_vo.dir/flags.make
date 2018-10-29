@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11 -march=native -O3 -O3 -DNDEBUG
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/eigen3 -isystem /usr/local/include -isystem /usr/local/include/opencv -I/home/will/src/Sophus -I/home/will/Desktop/vslam/项目代码/project/0.2/include 
+CXX_INCLUDES = -I/usr/include/eigen3 -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/will/code/ros/catkin_ws/src/lsd_slam-YaoZhiwen/lsd_slam_viewer/thirdparty/Sophus -I/home/will/code/vslam/项目代码/13.前端project/0.2/include 
 
