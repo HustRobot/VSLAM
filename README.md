@@ -119,7 +119,9 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
    $ sudo apt-get install -y --allow-unauthenticated libgfortran3
    $ sudo apt-get install -y cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
    $ sudo apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+   $ sudo apt-get install -y libvtk5-dev
    # 获取源码,opencv官网下载，或者使用/3rdparty文件夹下源码即可
+   # opencv_contrib源码地址https://github.com/opencv/opencv_contrib/tree/3.4
    will@Will:~$ cd ~/src/opencv-3.3.1
    will@Will:~/src/opencv-3.3.1$ ls
    opencv-master.zip   opencv-master   opencv_contrib-master.zip  opencv_contrib-master
@@ -135,7 +137,7 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
    #注意：sudo make install之后，~/src/opencv3.3.1/opencv/build文件夹切勿删除
    ---------------------------------------------------------
    #补充说明
-   $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib_master/modules -D PYTHON_EXECUTABLE=/usr/bin/python3.5 -D BUILD_EXAMPLES=ON ..
+   $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib_master/modules -D PYTHON_EXECUTABLE=/usr/bin/python3.5 -D BUILD_EXAMPLES=ON -D WITH_VTK=ON ..
    其中 -D表示定义，其后是命令和参数，
    第一个是编译类型，源码是是release（release是比较稳定的版本，建议用这个版本），所以参数是RELEASE。
    第二个是安装路径。
