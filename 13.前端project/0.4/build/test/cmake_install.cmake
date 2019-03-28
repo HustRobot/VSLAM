@@ -1,4 +1,4 @@
-# Install script for directory: /home/will/Desktop/vslam/项目代码/project/0.4/test
+# Install script for directory: /home/will/code/vslam/code/13.前端project/0.4/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

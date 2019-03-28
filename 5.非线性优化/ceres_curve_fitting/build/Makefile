@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting
+CMAKE_SOURCE_DIR = /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build
+CMAKE_BINARY_DIR = /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build/CMakeFiles /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build/CMakeFiles /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named my_cerestest
+
+# Build rule for target.
+my_cerestest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_cerestest
+.PHONY : my_cerestest
+
+# fast build rule for target.
+my_cerestest/fast:
+	$(MAKE) -f CMakeFiles/my_cerestest.dir/build.make CMakeFiles/my_cerestest.dir/build
+.PHONY : my_cerestest/fast
 
 #=============================================================================
 # Target rules for targets named curve_fitting
@@ -150,6 +163,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/curve_fitting.dir/build.make CMakeFiles/curve_fitting.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+my_cerestest.o: my_cerestest.cpp.o
+
+.PHONY : my_cerestest.o
+
+# target to build an object file
+my_cerestest.cpp.o:
+	$(MAKE) -f CMakeFiles/my_cerestest.dir/build.make CMakeFiles/my_cerestest.dir/my_cerestest.cpp.o
+.PHONY : my_cerestest.cpp.o
+
+my_cerestest.i: my_cerestest.cpp.i
+
+.PHONY : my_cerestest.i
+
+# target to preprocess a source file
+my_cerestest.cpp.i:
+	$(MAKE) -f CMakeFiles/my_cerestest.dir/build.make CMakeFiles/my_cerestest.dir/my_cerestest.cpp.i
+.PHONY : my_cerestest.cpp.i
+
+my_cerestest.s: my_cerestest.cpp.s
+
+.PHONY : my_cerestest.s
+
+# target to generate assembly for a file
+my_cerestest.cpp.s:
+	$(MAKE) -f CMakeFiles/my_cerestest.dir/build.make CMakeFiles/my_cerestest.dir/my_cerestest.cpp.s
+.PHONY : my_cerestest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... my_cerestest"
 	@echo "... curve_fitting"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... my_cerestest.o"
+	@echo "... my_cerestest.i"
+	@echo "... my_cerestest.s"
 .PHONY : help
 
 

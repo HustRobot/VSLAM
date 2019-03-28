@@ -1,4 +1,4 @@
-# Install script for directory: /home/will/Desktop/vslam/项目代码/10.3D-3D:ICP
+# Install script for directory: /home/will/code/vslam/项目代码/10.3D-3D:ICP
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/will/Desktop/vslam/项目代码/10.3D-3D:ICP/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/will/code/vslam/项目代码/10.3D-3D:ICP/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

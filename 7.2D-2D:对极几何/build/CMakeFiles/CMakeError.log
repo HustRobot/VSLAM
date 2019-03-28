@@ -1,26 +1,26 @@
 Detecting C [-std=c11] compiler features failed to compile with the following output:
-Change Dir: /home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp
+Change Dir: /home/will/code/vslam/code/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_79827/fast"
-/usr/bin/make -f CMakeFiles/cmTC_79827.dir/build.make CMakeFiles/cmTC_79827.dir/build
-make[1]: Entering directory '/home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp'
-CMakeFiles/cmTC_79827.dir/build.make:64: *** target pattern contains no '%'.  Stop.
-make[1]: Leaving directory '/home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_79827/fast' failed
-make: *** [cmTC_79827/fast] Error 2
+Run Build Command:"/usr/bin/make" "cmTC_6a8e4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6a8e4.dir/build.make CMakeFiles/cmTC_6a8e4.dir/build
+make[1]: Entering directory '/home/will/code/vslam/code/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp'
+CMakeFiles/cmTC_6a8e4.dir/build.make:64: *** target pattern contains no '%'.  Stop.
+make[1]: Leaving directory '/home/will/code/vslam/code/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6a8e4/fast' failed
+make: *** [cmTC_6a8e4/fast] Error 2
 
 
 
 Detecting CXX [-std=c++14] compiler features failed to compile with the following output:
-Change Dir: /home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp
+Change Dir: /home/will/code/vslam/code/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_51fcd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_51fcd.dir/build.make CMakeFiles/cmTC_51fcd.dir/build
-make[1]: Entering directory '/home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp'
-CMakeFiles/cmTC_51fcd.dir/build.make:64: *** target pattern contains no '%'.  Stop.
-make[1]: Leaving directory '/home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_51fcd/fast' failed
-make: *** [cmTC_51fcd/fast] Error 2
+Run Build Command:"/usr/bin/make" "cmTC_1b028/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1b028.dir/build.make CMakeFiles/cmTC_1b028.dir/build
+make[1]: Entering directory '/home/will/code/vslam/code/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp'
+CMakeFiles/cmTC_1b028.dir/build.make:64: *** target pattern contains no '%'.  Stop.
+make[1]: Leaving directory '/home/will/code/vslam/code/7.2D-2D:对极几何/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1b028/fast' failed
+make: *** [cmTC_1b028/fast] Error 2
 
 
 

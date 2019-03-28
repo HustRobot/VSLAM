@@ -68,7 +68,7 @@ myslam/map.h
 opencv2/features2d/features2d.hpp
 -
 
-/home/will/Desktop/vslam/项目代码/project/0.4/test/run_vo.cpp
+/home/will/code/vslam/code/13.前端project/0.4/test/run_vo.cpp
 fstream
 -
 boost/timer.hpp
@@ -82,9 +82,9 @@ opencv2/viz.hpp
 opencv2/imgproc/imgproc.hpp
 -
 myslam/config.h
-/home/will/Desktop/vslam/项目代码/project/0.4/test/myslam/config.h
+/home/will/code/vslam/code/13.前端project/0.4/test/myslam/config.h
 myslam/visual_odometry.h
-/home/will/Desktop/vslam/项目代码/project/0.4/test/myslam/visual_odometry.h
+/home/will/code/vslam/code/13.前端project/0.4/test/myslam/visual_odometry.h
 
 /home/will/src/Sophus/sophus/se3.h
 so3.h

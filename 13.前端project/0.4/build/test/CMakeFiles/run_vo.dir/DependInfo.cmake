@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/will/Desktop/vslam/项目代码/project/0.4/test/run_vo.cpp" "/home/will/Desktop/vslam/项目代码/project/0.4/build/test/CMakeFiles/run_vo.dir/run_vo.cpp.o"
+  "/home/will/code/vslam/code/13.前端project/0.4/test/run_vo.cpp" "/home/will/code/vslam/code/13.前端project/0.4/build/test/CMakeFiles/run_vo.dir/run_vo.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,7 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/will/Desktop/vslam/项目代码/project/0.4/build/src/CMakeFiles/myslam.dir/DependInfo.cmake"
+  "/home/will/code/vslam/code/13.前端project/0.4/build/src/CMakeFiles/myslam.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/main.cpp" "/home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build/CMakeFiles/curve_fitting.dir/main.cpp.o"
+  "/home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/main.cpp" "/home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build/CMakeFiles/curve_fitting.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -12,7 +12,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include"
   "/usr/include/eigen3"
-  "/usr/local/include/opencv"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
   )
 
 # Targets to which this target links.

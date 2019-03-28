@@ -1,0 +1,18 @@
+reading database
+reading images... 
+detecting ORB features ... 
+[ INFO:0] Initialize OpenCL runtime...
+comparing images with database 
+database info: Database: Entries = 10, Using direct index = no. Vocabulary: k = 10, L = 5, Weighting = tf-idf, Scoring = L1-norm, Number of words = 97912
+searching for image 0 returns 9 results:
+<EntryId: 0, Score: 1>
+<EntryId: 7, Score: 0.162629>
+<EntryId: 6, Score: 0.00457307>
+<EntryId: 2, Score: 0.00351343>
+<EntryId: 1, Score: 0.00342939>
+<EntryId: 4, Score: 0.0029333>
+<EntryId: 5, Score: 0.00177928>
+<EntryId: 9, Score: 0.00167227>
+<EntryId: 8, Score: 0.00135933>
+
+done.

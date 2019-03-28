@@ -1,4 +1,4 @@
-# Install script for directory: /home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何
+# Install script for directory: /home/will/code/vslam/code/7.2D-2D:对极几何
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/will/code/vslam/code/7.2D-2D:对极几何/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

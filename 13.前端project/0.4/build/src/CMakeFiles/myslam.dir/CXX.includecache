@@ -90,35 +90,35 @@ myslam/map.h
 opencv2/features2d/features2d.hpp
 -
 
-/home/will/Desktop/vslam/项目代码/project/0.4/src/camera.cpp
+/home/will/code/vslam/code/13.前端project/0.4/src/camera.cpp
 myslam/camera.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/camera.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/camera.h
 myslam/config.h
 -
 
-/home/will/Desktop/vslam/项目代码/project/0.4/src/config.cpp
+/home/will/code/vslam/code/13.前端project/0.4/src/config.cpp
 myslam/config.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/config.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/config.h
 
-/home/will/Desktop/vslam/项目代码/project/0.4/src/frame.cpp
+/home/will/code/vslam/code/13.前端project/0.4/src/frame.cpp
 myslam/frame.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/frame.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/frame.h
 
-/home/will/Desktop/vslam/项目代码/project/0.4/src/g2o_types.cpp
+/home/will/code/vslam/code/13.前端project/0.4/src/g2o_types.cpp
 myslam/g2o_types.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/g2o_types.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/g2o_types.h
 
-/home/will/Desktop/vslam/项目代码/project/0.4/src/map.cpp
+/home/will/code/vslam/code/13.前端project/0.4/src/map.cpp
 myslam/map.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/map.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/map.h
 
-/home/will/Desktop/vslam/项目代码/project/0.4/src/mappoint.cpp
+/home/will/code/vslam/code/13.前端project/0.4/src/mappoint.cpp
 myslam/common_include.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/common_include.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/common_include.h
 myslam/mappoint.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/mappoint.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/mappoint.h
 
-/home/will/Desktop/vslam/项目代码/project/0.4/src/visual_odometry.cpp
+/home/will/code/vslam/code/13.前端project/0.4/src/visual_odometry.cpp
 opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc/imgproc.hpp
@@ -130,11 +130,11 @@ algorithm
 boost/timer.hpp
 -
 myslam/config.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/config.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/config.h
 myslam/visual_odometry.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/visual_odometry.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/visual_odometry.h
 myslam/g2o_types.h
-/home/will/Desktop/vslam/项目代码/project/0.4/src/myslam/g2o_types.h
+/home/will/code/vslam/code/13.前端project/0.4/src/myslam/g2o_types.h
 
 /home/will/src/Sophus/sophus/se3.h
 so3.h

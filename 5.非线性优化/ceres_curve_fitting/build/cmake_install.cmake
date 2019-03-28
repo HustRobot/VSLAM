@@ -1,4 +1,4 @@
-# Install script for directory: /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting
+# Install script for directory: /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

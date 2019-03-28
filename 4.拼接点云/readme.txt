@@ -57,3 +57,7 @@ $ pcl_viewer map.pcd
 
 # 3.Others:
 载入信息是彩色图片，深度图以及pose.txt
+
+可能出现的问题
+https://github.com/gaoxiang12/slambook/issues/129
+这个问题很奇怪，修正之后，过几个月不小心干了什么就又坏掉了。

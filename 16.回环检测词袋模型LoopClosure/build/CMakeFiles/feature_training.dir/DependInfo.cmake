@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/will/Desktop/vslam/项目代码/16.回环检测词袋模型LoopClosure/feature_training.cpp" "/home/will/Desktop/vslam/项目代码/16.回环检测词袋模型LoopClosure/build/CMakeFiles/feature_training.dir/feature_training.cpp.o"
+  "/home/will/code/vslam/code/16.回环检测词袋模型LoopClosure/feature_training.cpp" "/home/will/code/vslam/code/16.回环检测词袋模型LoopClosure/build/CMakeFiles/feature_training.dir/feature_training.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include"
-  "/usr/local/include/opencv"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
   )
 
 # Targets to which this target links.

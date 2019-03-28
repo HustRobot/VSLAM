@@ -18,3 +18,6 @@ add_definitions( ${PCL_DEFINITIONS} )
 
 add_executable( joinMap joinMap.cpp )
 target_link_libraries( joinMap ${OpenCV_LIBS} ${PCL_LIBRARIES} )
+
+add_executable( splitMap splitMap.cpp )
+target_link_libraries( splitMap ${OpenCV_LIBS} ${PCL_LIBRARIES} )

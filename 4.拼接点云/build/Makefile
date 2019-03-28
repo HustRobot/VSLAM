@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/will/Desktop/vslam/项目代码/4.拼接点云
+CMAKE_SOURCE_DIR = /home/will/code/vslam/code/4.拼接点云
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/will/Desktop/vslam/项目代码/4.拼接点云/build
+CMAKE_BINARY_DIR = /home/will/code/vslam/code/4.拼接点云/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/Desktop/vslam/项目代码/4.拼接点云/build/CMakeFiles /home/will/Desktop/vslam/项目代码/4.拼接点云/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/vslam/code/4.拼接点云/build/CMakeFiles /home/will/code/vslam/code/4.拼接点云/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/Desktop/vslam/项目代码/4.拼接点云/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/will/code/vslam/code/4.拼接点云/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named splitMap
+
+# Build rule for target.
+splitMap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 splitMap
+.PHONY : splitMap
+
+# fast build rule for target.
+splitMap/fast:
+	$(MAKE) -f CMakeFiles/splitMap.dir/build.make CMakeFiles/splitMap.dir/build
+.PHONY : splitMap/fast
 
 #=============================================================================
 # Target rules for targets named joinMap
@@ -150,6 +163,33 @@ joinMap.cpp.s:
 	$(MAKE) -f CMakeFiles/joinMap.dir/build.make CMakeFiles/joinMap.dir/joinMap.cpp.s
 .PHONY : joinMap.cpp.s
 
+splitMap.o: splitMap.cpp.o
+
+.PHONY : splitMap.o
+
+# target to build an object file
+splitMap.cpp.o:
+	$(MAKE) -f CMakeFiles/splitMap.dir/build.make CMakeFiles/splitMap.dir/splitMap.cpp.o
+.PHONY : splitMap.cpp.o
+
+splitMap.i: splitMap.cpp.i
+
+.PHONY : splitMap.i
+
+# target to preprocess a source file
+splitMap.cpp.i:
+	$(MAKE) -f CMakeFiles/splitMap.dir/build.make CMakeFiles/splitMap.dir/splitMap.cpp.i
+.PHONY : splitMap.cpp.i
+
+splitMap.s: splitMap.cpp.s
+
+.PHONY : splitMap.s
+
+# target to generate assembly for a file
+splitMap.cpp.s:
+	$(MAKE) -f CMakeFiles/splitMap.dir/build.make CMakeFiles/splitMap.dir/splitMap.cpp.s
+.PHONY : splitMap.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -157,11 +197,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... splitMap"
 	@echo "... edit_cache"
 	@echo "... joinMap"
 	@echo "... joinMap.o"
 	@echo "... joinMap.i"
 	@echo "... joinMap.s"
+	@echo "... splitMap.o"
+	@echo "... splitMap.i"
+	@echo "... splitMap.s"
 .PHONY : help
 
 

@@ -120,6 +120,14 @@ int main ( int argc, char** argv )
     find_feature_matches ( img_1, img_2, keypoints_1, keypoints_2, matches );
     cout<<"一共找到了"<<matches.size() <<"组匹配点"<<endl;
 
+
+    //--[5]:绘制匹配结果
+    Mat img_match;
+    drawMatches ( img_1, keypoints_1, img_2, keypoints_2, matches, img_match );
+    namedWindow("img_match", WINDOW_NORMAL);
+    imshow ( "img_match", img_match );
+    waitKey(0);
+
     //-- 估计两张图像间运动
     Mat R,t; //旋转平移矩阵
     pose_estimation_2d2d ( keypoints_1, keypoints_2, matches, R, t );

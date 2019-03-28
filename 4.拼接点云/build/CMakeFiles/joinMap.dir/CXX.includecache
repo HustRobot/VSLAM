@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/will/Desktop/vslam/项目代码/4.拼接点云/joinMap.cpp
+/home/will/code/vslam/code/4.拼接点云/joinMap.cpp
 iostream
 -
 fstream

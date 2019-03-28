@@ -41,20 +41,21 @@ int main( int argc, char** argv )
     // read the images and database  
     cout<<"reading database"<<endl;
 
-    DBoW3::Vocabulary vocab("./vocabulary.yml.gz");
+    //DBoW3::Vocabulary vocab("../data/vocabulary.yml.gz");
     //使用大字典取消下行注释，注释掉上行
-    //DBoW3::Vocabulary vocab("./vocab_larger.yml.gz");  // use large vocab if you want: 
-    
+    DBoW3::Vocabulary vocab("../data/focus_vocab_larger.yml.gz");  // use large vocab if you want: 
     if ( vocab.empty() )
     {
         cerr<<"Vocabulary does not exist."<<endl;
         return 1;
     }
+
+
     cout<<"reading images... "<<endl;
     vector<Mat> images; 
     for ( int i=0; i<10; i++ )
     {
-        string path = "../data/"+to_string(i+1)+".png";
+        string path = "../data_focus_part/"+to_string(i)+".png";
         images.push_back( imread(path) );
     }
     
@@ -84,23 +85,23 @@ int main( int argc, char** argv )
 
 
 
-    // we can compare the images directly or we can compare one image to a database 
-    //计算图像与图像的相似度
-    // images :
-    cout<<"comparing images with images "<<endl;
-    for ( int i=0; i<images.size(); i++ )
-    {
-        DBoW3::BowVector v1;
-        vocab.transform( descriptors[i], v1 );
-        for ( int j=i; j<images.size(); j++ )
-        {
-            DBoW3::BowVector v2;
-            vocab.transform( descriptors[j], v2 );
-            double score = vocab.score(v1, v2);
-            cout<<"image "<<i<<" vs image "<<j<<" : "<<score<<endl;
-        }
-        cout<<endl;
-    }
+    // // we can compare the images directly or we can compare one image to a database 
+    // //计算图像与图像的相似度
+    // // images :
+    // cout<<"comparing images with images "<<endl;
+    // for ( int i=0; i<images.size(); i++ )
+    // {
+    //     DBoW3::BowVector v1;
+    //     vocab.transform( descriptors[i], v1 );
+    //     for ( int j=i; j<images.size(); j++ )
+    //     {
+    //         DBoW3::BowVector v2;
+    //         vocab.transform( descriptors[j], v2 );
+    //         double score = vocab.score(v1, v2);
+    //         cout<<"image "<<i<<" vs image "<<j<<" : "<<score<<endl;
+    //     }
+    //     cout<<endl;
+    // }
     
 
 
@@ -114,12 +115,17 @@ int main( int argc, char** argv )
     for ( int i=0; i<descriptors.size(); i++ )
         db.add(descriptors[i]);
     cout<<"database info: "<<db<<endl;
-    for ( int i=0; i<descriptors.size(); i++ )
-    {
-        DBoW3::QueryResults ret;
-        db.query( descriptors[i], ret, 4);      // max result=4
-        cout<<"searching for image "<<i<<" returns "<<ret<<endl<<endl;
-    }
+    // for ( int i=0; i<descriptors.size(); i++ )
+    // {
+    //     DBoW3::QueryResults ret;
+    //     db.query( descriptors[i], ret, 4);      // max result=4
+    //     cout<<"searching for image "<<i<<" returns "<<ret<<endl<<endl;
+    // }
+    //只输出第0张图片结果
+    DBoW3::QueryResults ret;
+    db.query( descriptors[0], ret, 4);    //第0张图片为实验假设回环数据  // max result=4
+    cout<<"searching for image "<<0<<" returns "<<ret<<endl<<endl;
+
     cout<<"done."<<endl;
 
 

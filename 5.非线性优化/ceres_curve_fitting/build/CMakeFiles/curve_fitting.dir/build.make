@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting
+CMAKE_SOURCE_DIR = /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build
+CMAKE_BINARY_DIR = /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/curve_fitting.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/curve_fitting.dir/flags.make
 
 CMakeFiles/curve_fitting.dir/main.cpp.o: CMakeFiles/curve_fitting.dir/flags.make
 CMakeFiles/curve_fitting.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/curve_fitting.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/curve_fitting.dir/main.cpp.o -c /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/curve_fitting.dir/main.cpp.o"
+	g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/curve_fitting.dir/main.cpp.o -c /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/main.cpp
 
 CMakeFiles/curve_fitting.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/curve_fitting.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/main.cpp > CMakeFiles/curve_fitting.dir/main.cpp.i
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/main.cpp > CMakeFiles/curve_fitting.dir/main.cpp.i
 
 CMakeFiles/curve_fitting.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/curve_fitting.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/main.cpp -o CMakeFiles/curve_fitting.dir/main.cpp.s
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/main.cpp -o CMakeFiles/curve_fitting.dir/main.cpp.s
 
 CMakeFiles/curve_fitting.dir/main.cpp.o.requires:
 
@@ -88,78 +88,77 @@ curve_fitting_OBJECTS = \
 # External object files for target curve_fitting
 curve_fitting_EXTERNAL_OBJECTS =
 
-curve_fitting: CMakeFiles/curve_fitting.dir/main.cpp.o
-curve_fitting: CMakeFiles/curve_fitting.dir/build.make
-curve_fitting: /usr/local/lib/libceres.a
-curve_fitting: /usr/local/lib/libopencv_stitching.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_superres.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_videostab.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_aruco.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_bgsegm.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_bioinspired.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_ccalib.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_dpm.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_face.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_freetype.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_fuzzy.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_hdf.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_img_hash.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_line_descriptor.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_optflow.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_reg.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_rgbd.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_saliency.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_sfm.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_stereo.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_structured_light.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_surface_matching.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_tracking.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_xfeatures2d.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_ximgproc.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_xobjdetect.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_xphoto.so.3.3.1
-curve_fitting: /usr/lib/x86_64-linux-gnu/libglog.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libspqr.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libtbb.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libcholmod.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libccolamd.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libcamd.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libcolamd.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libamd.so
-curve_fitting: /usr/lib/liblapack.so
-curve_fitting: /usr/lib/libblas.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/librt.so
-curve_fitting: /usr/lib/liblapack.so
-curve_fitting: /usr/lib/libblas.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
-curve_fitting: /usr/lib/x86_64-linux-gnu/librt.so
-curve_fitting: /usr/local/lib/libopencv_photo.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_datasets.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_plot.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_text.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_dnn.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_ml.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_shape.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_video.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_calib3d.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_features2d.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_highgui.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_videoio.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_viz.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_phase_unwrapping.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_flann.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_imgcodecs.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_objdetect.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_imgproc.so.3.3.1
-curve_fitting: /usr/local/lib/libopencv_core.so.3.3.1
-curve_fitting: CMakeFiles/curve_fitting.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable curve_fitting"
+../bin/curve_fitting: CMakeFiles/curve_fitting.dir/main.cpp.o
+../bin/curve_fitting: CMakeFiles/curve_fitting.dir/build.make
+../bin/curve_fitting: /usr/local/lib/libceres.a
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stitching3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_superres3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videostab3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_aruco3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bgsegm3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bioinspired3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ccalib3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_cvv3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dpm3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_face3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_fuzzy3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_hdf3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_img_hash3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_line_descriptor3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_optflow3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_reg3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_rgbd3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_saliency3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stereo3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_structured_light3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_surface_matching3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_tracking3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2d3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libglog.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libspqr.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libtbb.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libcholmod.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libccolamd.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libcamd.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libcolamd.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libamd.so
+../bin/curve_fitting: /usr/lib/liblapack.so
+../bin/curve_fitting: /usr/lib/libblas.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/librt.so
+../bin/curve_fitting: /usr/lib/liblapack.so
+../bin/curve_fitting: /usr/lib/libblas.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
+../bin/curve_fitting: /usr/lib/x86_64-linux-gnu/librt.so
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_plot3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_text3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dnn3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ml3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_video3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_calib3d3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_features2d3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_highgui3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videoio3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_viz3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_phase_unwrapping3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_flann3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
+../bin/curve_fitting: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
+../bin/curve_fitting: CMakeFiles/curve_fitting.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/curve_fitting"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/curve_fitting.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/curve_fitting.dir/build: curve_fitting
+CMakeFiles/curve_fitting.dir/build: ../bin/curve_fitting
 
 .PHONY : CMakeFiles/curve_fitting.dir/build
 
@@ -172,6 +171,6 @@ CMakeFiles/curve_fitting.dir/clean:
 .PHONY : CMakeFiles/curve_fitting.dir/clean
 
 CMakeFiles/curve_fitting.dir/depend:
-	cd /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build /home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/build/CMakeFiles/curve_fitting.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build /home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/build/CMakeFiles/curve_fitting.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/curve_fitting.dir/depend
 

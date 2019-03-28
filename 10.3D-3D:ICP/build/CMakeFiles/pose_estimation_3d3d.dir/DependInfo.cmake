@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/will/Desktop/vslam/项目代码/10.3D-3D:ICP/pose_estimation_3d3d.cpp" "/home/will/Desktop/vslam/项目代码/10.3D-3D:ICP/build/CMakeFiles/pose_estimation_3d3d.dir/pose_estimation_3d3d.cpp.o"
+  "/home/will/code/vslam/项目代码/10.3D-3D:ICP/pose_estimation_3d3d.cpp" "/home/will/code/vslam/项目代码/10.3D-3D:ICP/build/CMakeFiles/pose_estimation_3d3d.dir/pose_estimation_3d3d.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -32,7 +32,7 @@ using namespace std;
 
 
 /**
- * @function struct
+ * @struct
  * @brief 代价函数的计算模型
  */
 // 

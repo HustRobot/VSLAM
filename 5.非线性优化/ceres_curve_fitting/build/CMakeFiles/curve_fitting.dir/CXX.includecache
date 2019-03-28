@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/will/Desktop/vslam/项目代码/5.非线性优化/ceres_curve_fitting/main.cpp
+/home/will/code/vslam/code/5.非线性优化/ceres_curve_fitting/main.cpp
 iostream
 -
 opencv2/core/core.hpp
@@ -15,6 +15,10 @@ ceres/ceres.h
 -
 chrono
 -
+
+/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
+opencv2/core/core_c.h
+/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/opencv2/core/core_c.h
 
 /usr/include/eigen3/Eigen/Cholesky
 Core
@@ -1445,10 +1449,6 @@ ceres/internal/reenable_warnings.h
 /usr/local/include/ceres/ceres/internal/reenable_warnings.h
 
 /usr/local/include/ceres/version.h
-
-/usr/local/include/opencv/cxcore.h
-opencv2/core/core_c.h
-/usr/local/include/opencv/opencv2/core/core_c.h
 
 /usr/local/include/opencv2/calib3d.hpp
 opencv2/core.hpp

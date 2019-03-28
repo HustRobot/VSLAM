@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/will/Desktop/vslam/项目代码/4.拼接点云/joinMap.cpp" "/home/will/Desktop/vslam/项目代码/4.拼接点云/build/CMakeFiles/joinMap.dir/joinMap.cpp.o"
+  "/home/will/code/vslam/code/4.拼接点云/joinMap.cpp" "/home/will/code/vslam/code/4.拼接点云/build/CMakeFiles/joinMap.dir/joinMap.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
