@@ -1,3 +1,0 @@
-/home/will/Desktop/vslam/项目代码/3.三维空间刚体运动/visualizeGeometry/build/CMakeFiles/rebuild_cache.dir
-/home/will/Desktop/vslam/项目代码/3.三维空间刚体运动/visualizeGeometry/build/CMakeFiles/edit_cache.dir
-/home/will/Desktop/vslam/项目代码/3.三维空间刚体运动/visualizeGeometry/build/CMakeFiles/visualizeGeometry.dir

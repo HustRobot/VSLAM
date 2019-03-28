@@ -1,5 +1,5 @@
 /3rdparty/
-*/build/
-*/bin/
-*/lib/
-*/.vscode/
+*build/
+*bin/
+*lib/
+*.vscode/
