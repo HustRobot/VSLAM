@@ -20,8 +20,7 @@
 
 
 /// Global Variables
-
-
+double abc[3] = {0,0,0};     //abc参数估计值
 
 /// Function Declarations
 bool function_show(std::vector<cv::Point2d>& in_point, int x_start_pix, int x_end_pix, int y_start_pix, int y_end_pix, double x_lim_l, double x_lim_h, double y_lim_l, double y_lim_h, cv::Mat& src); 
@@ -39,7 +38,7 @@ struct CURVE_FITTING_COST
     {
         residual[0] = T ( _y ) - 
             /* Input your function here. */
-            abc[0]*T(_x)*T(_x) + abc[1]*T(_x) + abc[2] ; // y=a*x^2+b*x+c
+            ( abc[0]*T(_x)*T(_x) + abc[1]*T(_x) + abc[2] ); // y=a*x^2+b*x+c
         return true;
     }
     const double _x, _y;    // x,y数据
@@ -59,11 +58,11 @@ struct CURVE_FITTING_COST
 int main (int argc, char** argv)
 {
     //--生成实验数据
-    double a=0.01, b=0.23, c=1.0;  //真值
+    double a=0.01, b=2, c=10.0;  //真值
     int N=100;                   //点数
-    double w_sigma=1.0;          //高斯噪声sigma值
+    double w_sigma=18.0;          //高斯噪声sigma值
     cv::RNG rng;                 //opencv随机数生成器
-    double abc[3] = {0,0,0};     //abc参数估计值
+
 
     std::vector<double> x_data, y_data;      // 数据
     std::vector<cv::Point2d> dataset;
@@ -71,7 +70,7 @@ int main (int argc, char** argv)
     for ( int i=0; i<N; i++ )
     {
         //double x = i/100.0; //x范围从0到1，分辨率0.01
-        double x = i;
+        double x = 3*i;
         double /* Input your function here. */
             y = ( a*x*x + b*x + c ) //y=(ax^2+bx+c)
                 + rng.gaussian (w_sigma); //+随机高斯噪声
@@ -124,8 +123,8 @@ int main (int argc, char** argv)
     for ( auto a:abc )  std::cout<<a<<" ";
     std::cout<<std::endl;
 
-    cv::Mat background(320, 480, CV_8UC3, cv::Scalar(255,255,255));
-    function_show(dataset, 0,200, 0,100, -100,100, 200,0, background);
+    cv::Mat background( 480, 640, CV_8UC3, cv::Scalar(255,255,255));
+    function_show(dataset, 20,620, 40,440, -120,120, 400,-400, background);
     return 0;
 }
 
@@ -197,38 +196,72 @@ bool function_show(std::vector<cv::Point2d>& in_point, int x_start_pix, int x_en
     //计算原点
     origin_point_x_pix = -x_lim_l / x_dev + x_start_pix;
     origin_point_y_pix = -y_lim_l / y_dev + y_start_pix;
+
+    //--绘制边框
+    int Boundary_x_left=30;
+    int Boundary_x_right=src.cols - Boundary_x_left;
+    int Boundary_y_up=80;
+    int Boundary_y_down=src.rows - Boundary_y_up;//边框大小
+    cv::rectangle(src, cv::Point(Boundary_x_left, Boundary_y_up), cv::Point(Boundary_x_right,Boundary_y_down), cv::Scalar(0,0,0),1,CV_AA,0);
     
     //--绘制坐标轴
-    cv::circle(src, cv::Point(origin_point_x_pix,origin_point_y_pix), 3, cv::Scalar(0, 0, 0), CV_FILLED, 4);
-    cv::line(src, cv::Point(x_start_pix,origin_point_y_pix), cv::Point(x_end_pix,origin_point_y_pix), cv::Scalar(0, 0, 0), 1, 4);
-    cv::line(src, cv::Point(origin_point_x_pix,y_start_pix), cv::Point(origin_point_x_pix,y_end_pix), cv::Scalar(0, 0, 0), 1, 4);
+    cv::circle(src, cv::Point(origin_point_x_pix,origin_point_y_pix), 2, cv::Scalar(0, 0, 0), CV_FILLED, CV_AA, 0);
+    cv::line(src, cv::Point(Boundary_x_left,origin_point_y_pix), cv::Point(Boundary_x_right,origin_point_y_pix), cv::Scalar(0, 0, 0), 1, CV_AA, 0);//x
+    cv::line(src, cv::Point(origin_point_x_pix,Boundary_y_up), cv::Point(origin_point_x_pix,Boundary_y_down), cv::Scalar(0, 0, 0), 1, CV_AA, 0);//y
+        
+    //--绘制刻度尺
+    // cv::circle(src, cv::Point(origin_point_x_pix,origin_point_y_pix), 2, cv::Scalar(0, 0, 0), CV_FILLED, CV_AA, 0);
+    // cv::line(src, cv::Point(Boundary_x,origin_point_y_pix), cv::Point(src.cols - Boundary_x,origin_point_y_pix), cv::Scalar(0, 0, 0), 1, CV_AA, 0);//x
+    // cv::line(src, cv::Point(origin_point_x_pix,Boundary_y), cv::Point(origin_point_x_pix,src.rows - Boundary_y), cv::Scalar(0, 0, 0), 1, CV_AA, 0);//y
     
+    //--绘制标题
+	//设置绘制文本的相关参数
+	std::string x_text = "x"; 
+    std::string y_text = "y";
+	int font_face = cv::FONT_HERSHEY_COMPLEX; 
+	double font_scale = 1;
+	int thickness = 1;
+	int baseline;
+	//获取文本框的长宽
+	cv::Size text_size = cv::getTextSize(x_text, font_face, font_scale, thickness, &baseline);
+	//将文本框居中绘制
+	cv::Point x_axi; 
+	x_axi.x = Boundary_x_right - text_size.width;
+	x_axi.y = origin_point_y_pix + text_size.height;
+	cv::putText(src, x_text, x_axi, font_face, font_scale, cv::Scalar(23, 23, 23), thickness, 8, 0);
+	cv::Point y_axi; 
+    y_axi.x = origin_point_x_pix - text_size.width;
+	y_axi.y = Boundary_y_up + text_size.height;
+	cv::putText(src, y_text, y_axi, font_face, font_scale, cv::Scalar(0, 0, 0), thickness, 8, 0);
+
+
     //--绘制锚点
 	for (int i = 0; i < in_point.size(); i++)
 	{
 		cv::Point ipt_pix = data2pix(origin_point_x_pix,origin_point_y_pix,x_dev,y_dev, in_point[i]);
-		cv::circle(src, ipt_pix, 1, cv::Scalar(0, 0, 255), CV_FILLED, 4);
+        if( (ipt_pix.x>Boundary_x_left) && (ipt_pix.x<Boundary_x_right) && (ipt_pix.y>Boundary_y_up) && (ipt_pix.y<Boundary_y_down) )
+            cv::circle(src, ipt_pix, 1, cv::Scalar(0, 0, 255), CV_FILLED, CV_AA, 0);
 	}
 
-    // //--绘制函数曲线
-    // for (int i = x_start_pix; i < x_end_pix+1; i++)
-	// {
-	// 	cv::Point ipt_pix;
-    //     cv::Point2d ipt_data;
-	// 	ipt_pix.x = i;
-    //     ipt_pix.y = 0;
-    //     ipt_data = pix2data(origin_point_x_pix,origin_point_y_pix,x_dev,y_dev, ipt_pix);
-    //     /* Input your function here. */
-    //     ipt_data.y = 0.25*ipt_data.x*ipt_data.x + 2*ipt_data.x - 21;  //ipt_data.y=a*x*x+b*x+c;  //y=(ax^2+bx+c)
-	// 	ipt_pix = data2pix(origin_point_x_pix,origin_point_y_pix,x_dev,y_dev, ipt_data);
-	// 	cv::circle(src, ipt_pix, 1, cv::Scalar(255, 255, 255), CV_FILLED, CV_AA);
-	// }
+    //--绘制函数曲线
+    for (int i = x_start_pix; i < x_end_pix+1; i++)
+	{
+		cv::Point ipt_pix;
+        cv::Point2d ipt_data;
+		ipt_pix.x = i;
+        ipt_pix.y = 0;
+        ipt_data = pix2data(origin_point_x_pix,origin_point_y_pix,x_dev,y_dev, ipt_pix);
+        /* Input your function here. */
+        ipt_data.y = abc[0]*ipt_data.x*ipt_data.x + abc[1]*ipt_data.x - abc[2];  //ipt_data.y=a*x*x+b*x+c;  //y=(ax^2+bx+c)
+		ipt_pix = data2pix(origin_point_x_pix,origin_point_y_pix,x_dev,y_dev, ipt_data);
+        if( (ipt_pix.x>Boundary_x_left) && (ipt_pix.x<Boundary_x_right) && (ipt_pix.y>Boundary_y_up) && (ipt_pix.y<Boundary_y_down) )
+		    cv::circle(src, ipt_pix, 1, cv::Scalar(0, 235, 0), CV_FILLED, CV_AA, 0);
+	}
 	
 
 
+    //cv::namedWindow("polyfit_show", CV_WINDOW_NORMAL);
 	cv::imshow("polyfit_show", src);
 	cv::waitKey(0);
     return 1;
 }
-
-
