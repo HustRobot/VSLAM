@@ -17,13 +17,13 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include <ceres/ceres.h>
-
+#include "theme.h"
 
 /// Global Variables
-double abc[3] = {0,0,0};     //abc参数估计值
+double abc[3] = {0,0,0};     //abc参数初始值
 
 /// Function Declarations
-bool function_show(std::vector<cv::Point2d>& in_point, int x_start_pix, int x_end_pix, int y_start_pix, int y_end_pix, double x_lim_l, double x_lim_h, double y_lim_l, double y_lim_h, cv::Mat& src); 
+bool function_show(std::vector<cv::Point2d>& in_point, int x_start_pix, int x_end_pix, int y_start_pix, int y_end_pix, double x_lim_l, double x_lim_h, double y_lim_l, double y_lim_h, cv::Mat& src, Theme theme); 
 
 /**
  * @struct
@@ -123,8 +123,9 @@ int main (int argc, char** argv)
     for ( auto a:abc )  std::cout<<a<<" ";
     std::cout<<std::endl;
 
-    cv::Mat background( 480, 640, CV_8UC3, cv::Scalar(255,255,255));
-    function_show(dataset, 20,620, 40,440, -120,120, 400,-400, background);
+    Theme theme=getThemeInfo(Chinese);
+    cv::Mat background( 480, 640, CV_8UC3, theme.background);
+    function_show(dataset, 20,620, 40,440, -60,180, 700,-200, background, theme);
     return 0;
 }
 
@@ -139,7 +140,7 @@ int main (int argc, char** argv)
  * @author William YU
  * @brief 数值转换为像素值
  * @param   
- * @retval None
+ * @retval 
  */
 cv::Point data2pix(int origin_point_x_pix, int origin_point_y_pix, double x_dev, double y_dev, cv::Point2d data)
 {
@@ -154,7 +155,7 @@ cv::Point data2pix(int origin_point_x_pix, int origin_point_y_pix, double x_dev,
  * @author William YU
  * @brief 数值转换为像素值
  * @param   
- * @retval None
+ * @retval 
  */
 cv::Point2d pix2data(int origin_point_x_pix, int origin_point_y_pix, double x_dev, double y_dev, cv::Point pix)
 {
@@ -166,7 +167,7 @@ cv::Point2d pix2data(int origin_point_x_pix, int origin_point_y_pix, double x_de
 
 
 /**
- * @function polyfit_test
+ * @function function_show
  * @author William YU
  * @brief 数学函数图像可视化
  * @param   in_point:锚点
@@ -182,8 +183,7 @@ cv::Point2d pix2data(int origin_point_x_pix, int origin_point_y_pix, double x_de
  * @retval None
  */
 //Reference:https://github.com/jack-Dong/testPolt/
-
-bool function_show(std::vector<cv::Point2d>& in_point, int x_start_pix, int x_end_pix, int y_start_pix, int y_end_pix, double x_lim_l, double x_lim_h, double y_lim_l, double y_lim_h, cv::Mat& src) 
+bool function_show(std::vector<cv::Point2d>& in_point, int x_start_pix, int x_end_pix, int y_start_pix, int y_end_pix, double x_lim_l, double x_lim_h, double y_lim_l, double y_lim_h, cv::Mat& src, Theme theme) 
 {	
     //--坐标转换
 	int x_pix = x_end_pix-x_start_pix;//x像素区间
@@ -198,41 +198,112 @@ bool function_show(std::vector<cv::Point2d>& in_point, int x_start_pix, int x_en
     origin_point_y_pix = -y_lim_l / y_dev + y_start_pix;
 
     //--绘制边框
-    int Boundary_x_left=30;
+    int Boundary_x_left=50;
     int Boundary_x_right=src.cols - Boundary_x_left;
     int Boundary_y_up=80;
     int Boundary_y_down=src.rows - Boundary_y_up;//边框大小
-    cv::rectangle(src, cv::Point(Boundary_x_left, Boundary_y_up), cv::Point(Boundary_x_right,Boundary_y_down), cv::Scalar(0,0,0),1,CV_AA,0);
+    cv::rectangle(src, cv::Point(Boundary_x_left, Boundary_y_up), cv::Point(Boundary_x_right,Boundary_y_down), theme.axis,1,CV_AA,0);
     
     //--绘制坐标轴
-    cv::circle(src, cv::Point(origin_point_x_pix,origin_point_y_pix), 2, cv::Scalar(0, 0, 0), CV_FILLED, CV_AA, 0);
-    cv::line(src, cv::Point(Boundary_x_left,origin_point_y_pix), cv::Point(Boundary_x_right,origin_point_y_pix), cv::Scalar(0, 0, 0), 1, CV_AA, 0);//x
-    cv::line(src, cv::Point(origin_point_x_pix,Boundary_y_up), cv::Point(origin_point_x_pix,Boundary_y_down), cv::Scalar(0, 0, 0), 1, CV_AA, 0);//y
-        
-    //--绘制刻度尺
-    // cv::circle(src, cv::Point(origin_point_x_pix,origin_point_y_pix), 2, cv::Scalar(0, 0, 0), CV_FILLED, CV_AA, 0);
-    // cv::line(src, cv::Point(Boundary_x,origin_point_y_pix), cv::Point(src.cols - Boundary_x,origin_point_y_pix), cv::Scalar(0, 0, 0), 1, CV_AA, 0);//x
-    // cv::line(src, cv::Point(origin_point_x_pix,Boundary_y), cv::Point(origin_point_x_pix,src.rows - Boundary_y), cv::Scalar(0, 0, 0), 1, CV_AA, 0);//y
+    cv::circle(src, cv::Point(origin_point_x_pix,origin_point_y_pix), 2, theme.axis, CV_FILLED, CV_AA, 0);
+    cv::line(src, cv::Point(Boundary_x_left,origin_point_y_pix), cv::Point(Boundary_x_right,origin_point_y_pix), theme.axis, 1, CV_AA, 0);//x
+    cv::line(src, cv::Point(origin_point_x_pix,Boundary_y_up), cv::Point(origin_point_x_pix,Boundary_y_down),  theme.axis, 1, CV_AA, 0);//y
     
-    //--绘制标题
-	//设置绘制文本的相关参数
-	std::string x_text = "x"; 
-    std::string y_text = "y";
-	int font_face = cv::FONT_HERSHEY_COMPLEX; 
-	double font_scale = 1;
-	int thickness = 1;
-	int baseline;
-	//获取文本框的长宽
-	cv::Size text_size = cv::getTextSize(x_text, font_face, font_scale, thickness, &baseline);
-	//将文本框居中绘制
-	cv::Point x_axi; 
-	x_axi.x = Boundary_x_right - text_size.width;
-	x_axi.y = origin_point_y_pix + text_size.height;
-	cv::putText(src, x_text, x_axi, font_face, font_scale, cv::Scalar(23, 23, 23), thickness, 8, 0);
-	cv::Point y_axi; 
-    y_axi.x = origin_point_x_pix - text_size.width;
-	y_axi.y = Boundary_y_up + text_size.height;
-	cv::putText(src, y_text, y_axi, font_face, font_scale, cv::Scalar(0, 0, 0), thickness, 8, 0);
+    //--绘制刻度尺
+    int aix_dev=40;
+    std::vector<int> aix_x_pix,aix_y_pix;
+    std::vector<double> aix_x_data,aix_y_data;
+    for (int i=origin_point_x_pix;i<Boundary_x_right;i=i+aix_dev)//x+正半轴
+    {
+        if( (i>Boundary_x_left))
+        {
+            aix_x_pix.push_back(i);
+            aix_x_data.push_back((i-origin_point_x_pix)*x_dev);
+        }
+
+    }
+    for (int i=origin_point_y_pix;i<Boundary_y_down;i=i+aix_dev)//y-
+    {
+        if( (i>Boundary_y_up))
+        {
+            aix_y_pix.push_back(i);
+            aix_y_data.push_back((i-origin_point_y_pix)*y_dev);
+        }
+    }
+    for (int i=origin_point_x_pix;i>Boundary_x_left;i=i-aix_dev)//x-
+    {
+        if( (i<Boundary_x_right))
+        {
+            aix_x_pix.push_back(i);
+            aix_x_data.push_back((i-origin_point_x_pix)*x_dev);
+        }
+    }
+    for (int i=origin_point_y_pix;i>Boundary_y_up;i=i-aix_dev)//y+
+    {
+        if( (i<Boundary_y_down))
+        {
+            aix_y_pix.push_back(i);
+            aix_y_data.push_back((i-origin_point_y_pix)*y_dev);
+        }
+    }
+    for (int i=0;i<aix_x_pix.size();i++)
+    {
+        cv::line(src, cv::Point(aix_x_pix[i],Boundary_y_down), cv::Point(aix_x_pix[i],Boundary_y_down+5), theme.axis, 1, 8, 0);//x
+        std::string aixtext = std::to_string((int)aix_x_data[i]);
+        int font_face = cv::FONT_HERSHEY_COMPLEX;
+        double font_scale = 0.3;
+        int thickness = 1;
+        int baseline;
+        cv::Size text_size = cv::getTextSize(aixtext, font_face, font_scale, thickness, &baseline);
+        cv::Point x_aix_i;
+        x_aix_i.x = aix_x_pix[i] - text_size.width/2;
+        x_aix_i.y = Boundary_y_down + text_size.height +5;
+        cv::putText(src, aixtext, x_aix_i, font_face, font_scale,theme.axis, thickness, CV_AA, 0);
+    }
+    for (int i=0;i<aix_y_pix.size();i++)
+    {
+        cv::line(src, cv::Point(Boundary_x_left,aix_y_pix[i]), cv::Point(Boundary_x_left-5,aix_y_pix[i]), theme.axis, 1, 8, 0);//y
+        std::string aixtext = std::to_string((int)aix_y_data[i]);
+        int font_face = cv::FONT_HERSHEY_COMPLEX;
+        double font_scale = 0.3;
+        int thickness = 1;
+        int baseline;
+        cv::Size text_size = cv::getTextSize(aixtext, font_face, font_scale, thickness, &baseline);
+        cv::Point y_aix_i; 
+        y_aix_i.x = Boundary_x_left - text_size.width -5 ;
+        y_aix_i.y = aix_y_pix[i] + text_size.height/2; 
+        cv::putText(src, aixtext, y_aix_i, font_face, font_scale,theme.axis, thickness, CV_AA, 0);
+    }
+
+    //--绘制网格
+    for (int i=0;i<aix_x_pix.size();i++)
+    {
+        cv::line(src, cv::Point(aix_x_pix[i],Boundary_y_down-1), cv::Point(aix_x_pix[i],Boundary_y_up+1), theme.grid_line, 1, 8, 0);
+    }
+    for (int i=0;i<aix_y_pix.size();i++)
+    {
+        cv::line(src, cv::Point(Boundary_x_left+1,aix_y_pix[i]), cv::Point(Boundary_x_right-1,aix_y_pix[i]), theme.grid_line, 1, 8, 0);
+    }
+
+    // //--绘制标题
+	// //设置绘制文本的相关参数
+	// std::string x_text = "x"; 
+    // std::string y_text = "y";
+	// int font_face = cv::FONT_HERSHEY_COMPLEX;
+	// double font_scale = 0.5;
+	// int thickness = 1;
+	// int baseline;
+	// //获取文本框的长宽
+	// cv::Size text_size = cv::getTextSize(x_text, font_face, font_scale, thickness, &baseline);
+	// //将文本框居中绘制
+	// cv::Point x_axi; 
+	// x_axi.x = Boundary_x_right - text_size.width;
+	// x_axi.y = origin_point_y_pix + text_size.height;
+	// cv::putText(src, x_text, x_axi, font_face, font_scale, cv::Scalar(23, 23, 23), thickness, 8, 0);
+	// cv::Point y_axi;
+    // y_axi.x = origin_point_x_pix - text_size.width;
+	// y_axi.y = Boundary_y_up + text_size.height;
+	// cv::putText(src, y_text, y_axi, font_face, font_scale, cv::Scalar(0, 0, 0), thickness, 8, 0);
 
 
     //--绘制锚点
@@ -240,9 +311,9 @@ bool function_show(std::vector<cv::Point2d>& in_point, int x_start_pix, int x_en
 	{
 		cv::Point ipt_pix = data2pix(origin_point_x_pix,origin_point_y_pix,x_dev,y_dev, in_point[i]);
         if( (ipt_pix.x>Boundary_x_left) && (ipt_pix.x<Boundary_x_right) && (ipt_pix.y>Boundary_y_up) && (ipt_pix.y<Boundary_y_down) )
-            cv::circle(src, ipt_pix, 1, cv::Scalar(0, 0, 255), CV_FILLED, CV_AA, 0);
+            cv::circle(src, ipt_pix, 1, theme.pointS1, CV_FILLED, CV_AA, 0);
 	}
-
+    
     //--绘制函数曲线
     for (int i = x_start_pix; i < x_end_pix+1; i++)
 	{
@@ -255,7 +326,7 @@ bool function_show(std::vector<cv::Point2d>& in_point, int x_start_pix, int x_en
         ipt_data.y = abc[0]*ipt_data.x*ipt_data.x + abc[1]*ipt_data.x - abc[2];  //ipt_data.y=a*x*x+b*x+c;  //y=(ax^2+bx+c)
 		ipt_pix = data2pix(origin_point_x_pix,origin_point_y_pix,x_dev,y_dev, ipt_data);
         if( (ipt_pix.x>Boundary_x_left) && (ipt_pix.x<Boundary_x_right) && (ipt_pix.y>Boundary_y_up) && (ipt_pix.y<Boundary_y_down) )
-		    cv::circle(src, ipt_pix, 1, cv::Scalar(0, 235, 0), CV_FILLED, CV_AA, 0);
+		    cv::circle(src, ipt_pix, 1, theme.pointS2, CV_FILLED, CV_AA, 0);
 	}
 	
 

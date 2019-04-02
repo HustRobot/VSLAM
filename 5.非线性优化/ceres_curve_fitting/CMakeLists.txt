@@ -24,3 +24,6 @@ target_link_libraries( curve_fitting ${CERES_LIBRARIES} ${OpenCV_LIBS} )
 
 add_executable( my_cerestest my_cerestest.cpp )
 target_link_libraries( my_cerestest ${CERES_LIBRARIES} ${OpenCV_LIBS} )
+
+add_executable( theme_test theme_test.cpp )
+target_link_libraries( theme_test ${OpenCV_LIBS} )
