@@ -10,7 +10,7 @@
  * Programmer(s)           : William Yu, windmillyucong@163.com
  * Company                 : HUST, DMET国家重点实验室FOCUS团队
  * Modification History	   : ver1.0, 2018.04.01, William Yu
-                            
+
 =================================================================================*/
 
 # 0.Requirements
@@ -53,7 +53,11 @@ make
 生成点云
 ./joinMap
 查看点云图
-$ pcl_viewer map.pcd 
+
+```
+sudo apt-get install  pcl-tools
+pcl_viewer map.pcd 
+```
 
 # 3.Others:
 载入信息是彩色图片，深度图以及pose.txt
