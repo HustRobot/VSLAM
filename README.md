@@ -69,6 +69,9 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
    cmake ..
    make -j4
    sudo make install 
+   =================可能出现的问题===================
+   https://github.com/stevenlovegrove/Pangolin/issues/27
+   ===============================================
    ```
 
 
