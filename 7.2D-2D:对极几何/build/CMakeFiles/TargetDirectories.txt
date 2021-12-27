@@ -1,3 +1,0 @@
-/home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/CMakeFiles/rebuild_cache.dir
-/home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/CMakeFiles/edit_cache.dir
-/home/will/Desktop/vslam/项目代码/7.2D-2D:对极几何/build/CMakeFiles/pose_estimation_2d2d.dir

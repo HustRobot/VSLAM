@@ -1,0 +1,133 @@
+reading database
+reading images... 
+detecting ORB features ... 
+[ INFO:0] Initialize OpenCL runtime...
+comparing images with images 
+image 0 vs image 0 : 1
+image 0 vs image 1 : 0.00201064
+image 0 vs image 2 : 0.0029546
+image 0 vs image 3 : 0.00785156
+image 0 vs image 4 : 0.00681504
+image 0 vs image 5 : 0.00629842
+image 0 vs image 6 : 0.00452653
+image 0 vs image 7 : 0.00196114
+image 0 vs image 8 : 0.00849321
+image 0 vs image 9 : 0.0306572
+
+image 1 vs image 1 : 1
+image 1 vs image 2 : 0.025082
+image 1 vs image 3 : 0.00597156
+image 1 vs image 4 : 0.00364751
+image 1 vs image 5 : 0.00458698
+image 1 vs image 6 : 0.00587741
+image 1 vs image 7 : 0.00521632
+image 1 vs image 8 : 0.00661743
+image 1 vs image 9 : 0.0059525
+
+image 2 vs image 2 : 1
+image 2 vs image 3 : 0.00678883
+image 2 vs image 4 : 0.0039245
+image 2 vs image 5 : 0.0104254
+image 2 vs image 6 : 0.00791604
+image 2 vs image 7 : 0.00499522
+image 2 vs image 8 : 0.00497627
+image 2 vs image 9 : 0.00686568
+
+image 3 vs image 3 : 1
+image 3 vs image 4 : 0.00176185
+image 3 vs image 5 : 0.00881794
+image 3 vs image 6 : 0.00879057
+image 3 vs image 7 : 0.00876193
+image 3 vs image 8 : 0.00799292
+image 3 vs image 9 : 0.00389382
+
+image 4 vs image 4 : 1
+image 4 vs image 5 : 0.00712535
+image 4 vs image 6 : 0.00795609
+image 4 vs image 7 : 0.0055488
+image 4 vs image 8 : 0.00165572
+image 4 vs image 9 : 0.00515797
+
+image 5 vs image 5 : 1
+image 5 vs image 6 : 0.0027527
+image 5 vs image 7 : 0.00130352
+image 5 vs image 8 : 0.00576963
+image 5 vs image 9 : 0.00325172
+
+image 6 vs image 6 : 1
+image 6 vs image 7 : 0.0054425
+image 6 vs image 8 : 0.00473875
+image 6 vs image 9 : 0.00410202
+
+image 7 vs image 7 : 1
+image 7 vs image 8 : 0.00664312
+image 7 vs image 9 : 0.00350397
+
+image 8 vs image 8 : 1
+image 8 vs image 9 : 0.00685142
+
+image 9 vs image 9 : 1
+
+comparing images with database 
+database info: Database: Entries = 10, Using direct index = no. Vocabulary: k = 10, L = 5, Weighting = tf-idf, Scoring = L1-norm, Number of words = 99566
+searching for image 0 returns 4 results:
+<EntryId: 0, Score: 1>
+<EntryId: 9, Score: 0.0306572>
+<EntryId: 8, Score: 0.00849321>
+<EntryId: 3, Score: 0.00785156>
+
+searching for image 1 returns 4 results:
+<EntryId: 1, Score: 1>
+<EntryId: 2, Score: 0.025082>
+<EntryId: 8, Score: 0.00661743>
+<EntryId: 3, Score: 0.00597156>
+
+searching for image 2 returns 4 results:
+<EntryId: 2, Score: 1>
+<EntryId: 1, Score: 0.025082>
+<EntryId: 5, Score: 0.0104254>
+<EntryId: 6, Score: 0.00791604>
+
+searching for image 3 returns 4 results:
+<EntryId: 3, Score: 1>
+<EntryId: 5, Score: 0.00881794>
+<EntryId: 6, Score: 0.00879057>
+<EntryId: 7, Score: 0.00876193>
+
+searching for image 4 returns 4 results:
+<EntryId: 4, Score: 1>
+<EntryId: 6, Score: 0.00795609>
+<EntryId: 5, Score: 0.00712535>
+<EntryId: 0, Score: 0.00681504>
+
+searching for image 5 returns 4 results:
+<EntryId: 5, Score: 1>
+<EntryId: 2, Score: 0.0104254>
+<EntryId: 3, Score: 0.00881794>
+<EntryId: 4, Score: 0.00712535>
+
+searching for image 6 returns 4 results:
+<EntryId: 6, Score: 1>
+<EntryId: 3, Score: 0.00879057>
+<EntryId: 4, Score: 0.00795609>
+<EntryId: 2, Score: 0.00791604>
+
+searching for image 7 returns 4 results:
+<EntryId: 7, Score: 1>
+<EntryId: 3, Score: 0.00876193>
+<EntryId: 8, Score: 0.00664312>
+<EntryId: 4, Score: 0.0055488>
+
+searching for image 8 returns 4 results:
+<EntryId: 8, Score: 1>
+<EntryId: 0, Score: 0.00849321>
+<EntryId: 3, Score: 0.00799292>
+<EntryId: 9, Score: 0.00685142>
+
+searching for image 9 returns 4 results:
+<EntryId: 9, Score: 1>
+<EntryId: 0, Score: 0.0306572>
+<EntryId: 2, Score: 0.00686568>
+<EntryId: 8, Score: 0.00685142>
+
+done.

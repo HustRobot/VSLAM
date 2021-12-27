@@ -17,7 +17,7 @@
 输入参数：像素坐标，以及像素深度图 + 相机位姿
 成像过程：
     现实世界物体坐标
-        |———(外参数 变换矩阵Ｔ变换)——>  
+        |———(外参数 变换矩阵wing 换)——>
     相机坐标系　
         |———(同/Z)—>归一化平面坐标系——>
     径向和切向畸变纠正
@@ -59,22 +59,23 @@ using namespace std;
  * @function main
  * @author William Yu
  * @brief 
- * @param  None
+ * @param  Nones
  * @retval None
  */
 int main( int argc, char** argv )
 {
-    vector<cv::Mat> colorImgs, depthImgs;    // 彩色图和深度图
+    vector<cv::Mat> colorImgs, depthImgs;    //深度图容器和彩色图容器
     vector<Eigen::Isometry3d, Eigen::aligned_allocator<Eigen::Isometry3d>> poses;         // 相机位姿
     
     
-    ifstream fin("../data/pose.txt");
-    if (!fin)
+    ifstream fin("../data/pose.txt");//读取文件
+    if (!fin)//读取失败
     {
         cerr<<"cannot find pose file"<<endl; 
         return 1;
     }
     
+    //5个图片
     for ( int i=0; i<5; i++ )
     {
         boost::format fmt( "../%s/%s/%d.%s" ); //图像文件格式
@@ -84,14 +85,16 @@ int main( int argc, char** argv )
         double data[7] = {0};      //pose.txt的内容：x,y,z,Qx,Qy,Qz,Qw  xyz为位置，Q为四元数姿态，Qw为四元数实部
         for ( auto& d:data )    //读取txt文件的每一行
             fin>>d;
+        //四元素                实部     虚部Q_x   Q_y      Q_z
         Eigen::Quaterniond q( data[6], data[3], data[4], data[5] );
         Eigen::Isometry3d T(q);
+        //相机位置                         x        y       z
         T.pretranslate( Eigen::Vector3d( data[0], data[1], data[2] ));
         poses.push_back( T );
     }
     
     // 计算点云并拼接
-    // 相机内参 
+    // 相机内参
     double cx = 325.5;
     double cy = 253.5;
     double fx = 518.0;
@@ -106,22 +109,23 @@ int main( int argc, char** argv )
     
     // 新建一个点云
     PointCloud::Ptr pointCloud( new PointCloud ); 
+
     for ( int i=0; i<5; i++ )
     {
-         cout<<"转换图像中: "<<i+1<<endl; 
-         cv::Mat color = colorImgs[i]; 
-         cv::Mat depth = depthImgs[i];
-		 cv::imshow("color",color);
-		 cv::waitKey(0);//检查图片是否正常载入
-         Eigen::Isometry3d T = poses[i]; //每张图像对应的相机位姿
-
-         //--每个像素坐标转换到世界坐标
-         for ( int v=0; v<color.rows; v++ )
+        cout<<"转换图像中: "<<i+1<<endl; 
+        cv::Mat color = colorImgs[i]; 
+        cv::Mat depth = depthImgs[i];
+		cv::imshow("color",color);
+		cv::waitKey(0);//检查图片是否正常载入
+        Eigen::Isometry3d T = poses[i]; //每张图像对应的相机位姿
+        std::cout<<"T"<<i+1<<"="<<endl << T.matrix() <<std::endl;
+        //--每个像素坐标转换到世界坐标
+        for ( int v=0; v<color.rows; v++ )
 	        for ( int u=0; u<color.cols; u++ )
             {
                 //内参修正
                 unsigned int d = depth.ptr<unsigned short> (v)[u]; // 深度值
-                if ( d==0 ) continue; // 为0表示没有测量到
+                if ( d==0 ) continue; //为0表示没有测量到该点深度值
                 Eigen::Vector3d point; 
                 point[2] = double(d)/depthScale; 
                 point[0] = (u-cx)*point[2]/fx;
@@ -140,6 +144,9 @@ int main( int argc, char** argv )
                 p.r = color.data[ v*color.step+u*color.channels()+2 ];
                 pointCloud->points.push_back( p );
             }
+
+        cout<<"点云共有"<<pointCloud->size()<<"个点."<<endl;
+        cv::waitKey(0);//检查图片是否正常载入
     }
     
     pointCloud->is_dense = false;

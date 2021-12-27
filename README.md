@@ -1,32 +1,16 @@
-# VSLAM安装说明
+# VSLAM相关库安装说明
 
 [TOC]
 
-Created 2018.05.25 by William Yu; Last modified: 2018.09.24-V1.0.d
+Created 2018.05.25 by William Yu; Last modified: 2019.03.19-V1.0.f
 
 Contact: [windmillyucong@163.com](mailto:windmillyucong@163.com)
 
-Copyleft! 2018 William Yu. Some rights reserved.
+Copyleft! 2019 William Yu. Some rights reserved.
 
 ------
 
-## 数据集来源
-
-- https://vision.in.tum.de/data/datasets/rgbd-dataset/download
-  - http://filecremers3.informatik.tu-muenchen.de/rgbd/dataset/freiburg1/rgbd_dataset_freiburg1_desk.tgz
-- http://rpg.ifi.uzh.ch/software_datasets.html
-  - http://rpg.ifi.uzh.ch/datasets/remode_test_data.zip
-
-
-## 参考文献
-
-## Paper
-
-[1] 高翔, 张涛, 颜沁睿, 刘毅, 视觉SLAM十四讲：从理论到实践, 电子工业出版社, 2017
-
-[2] Evaluation of the RGB-D SLAM system http://wiki.ros.org/rgbdslam_electric/evaluation
-
-## 工具
+## Tools
 
 [1] Cmake <https://cmake.org/cmake-tutorial/>
 
@@ -34,7 +18,9 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
 
 [2] git 
 
-## 库
+[3] Ubuntu1604
+
+## Requirements & Tutorials
 
 [1] Eigen 线性代数库 http://eigen.tuxfamily.org/dox-devel/modules.html
 
@@ -50,15 +36,11 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
 
 [7] gstam 基于因子图优化的SLAM后端库
 
-[8] DBoW3 
+[8] DBoW3 词带模型库
 
 [9] Octomap 八叉树地图库
 
-## Requirements
-
-***Lots of  things need to get ready!***    
-
-***很多东西都得安装，记得抽空写个脚本一次性装好！***
+## Install
 
 1. 安装g++,git,cmake等常用工具，编辑器推荐使用VSCode
 
@@ -87,6 +69,9 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
    cmake ..
    make -j4
    sudo make install 
+   =================可能出现的问题===================
+   https://github.com/stevenlovegrove/Pangolin/issues/27
+   ===============================================
    ```
 
 
@@ -102,6 +87,21 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
    cmake ..
    make -j4
    只需编译即可，无需安装，编译之后的Sophus文件夹不要删除！
+   =====================可能会出现的问题============================
+   #-------------------问题描述-------------------#
+   CMakeLists.txt里面调用时是这么写的：
+   # Sophus 
+   find_package( Sophus REQUIRED )
+   include_directories( ${Sophus_INCLUDE_DIRS} )
+
+   #然而我的Sophus安装在/home/will/src/Sophus/路径下，find_package找不到
+   #-------------------解决方案-------------------#
+   改为：
+   # Sophus 
+   set(Sophus_DIR /home/will/src/Sophus/build)#路径改为自己的安装路径
+   find_package( Sophus REQUIRED )
+   include_directories( ${Sophus_INCLUDE_DIRS} )
+   =======================solved===============================
    ```
 
 
@@ -131,7 +131,7 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
    #编译安装
    will@Will:~/src/opencv-3.3.1/opencv$ mkdir build
    will@Will:~/src/opencv-3.3.1/opencv$ cd build/
-   will@Will:~/src/opencv-3.3.1/opencv/build$ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib_master/modules -D PYTHON_EXECUTABLE=/usr/bin/python3.5 -D BUILD_EXAMPLES=ON ..
+   will@Will:~/src/opencv-3.3.1/opencv/build$ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D INSTALL_C_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib_master/modules -D PYTHON_EXECUTABLE=/usr/bin/python3.5 -D BUILD_EXAMPLES=ON -D WITH_VTK=ON ..
    will@Will:~/src/opencv-3.3.1/opencv/build$ make -j4
    will@Will:~/src/opencv-3.3.1/opencv/build$ sudo make install
    #注意：sudo make install之后，~/src/opencv3.3.1/opencv/build文件夹切勿删除
@@ -307,7 +307,6 @@ http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf
     cd build
     cmake ..
     make -j4
-    sudo make install
     ```
 
 

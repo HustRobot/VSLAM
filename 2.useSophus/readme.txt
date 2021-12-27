@@ -29,6 +29,7 @@ git clone https://github.com/strasdat/Sophus.git
 
 * 编译
 cd ~/src/Sophus
+git checkout a621ff
 mkdir build
 cd build
 cmake ..
@@ -38,9 +39,7 @@ make
 
 
 # 1.Compile this program:
-
-* 然后编译此程序
-makmkdir build
+mkdir build
 cd build
 cmake ..
 make

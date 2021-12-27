@@ -16,7 +16,7 @@
 
 
 /*-----------------------------[Note]---------------------------
- * 还是没看懂，代码直接复制粘贴了，暂且放过
+ * 看懂了就觉得很简单
 --------------------------------------------------------------*/
 
 
@@ -53,7 +53,8 @@ void find_feature_matches (
     const Mat& img_1, const Mat& img_2,
     std::vector<KeyPoint>& keypoints_1,
     std::vector<KeyPoint>& keypoints_2,
-    std::vector< DMatch >& matches );
+    std::vector< DMatch >& matches 
+);
 
 // 像素坐标转相机归一化坐标
 Point2d pixel2cam ( const Point2d& p, const Mat& K );
@@ -135,8 +136,6 @@ protected:
 /**
  * @function main
  * @brief 
- * @param  None
- * @retval None
  */
 int main ( int argc, char** argv )
 {
@@ -157,14 +156,15 @@ int main ( int argc, char** argv )
     // 建立3D点
     Mat depth1 = imread ( argv[3], CV_LOAD_IMAGE_UNCHANGED );       // 深度图为16位无符号数，单通道图像
     Mat depth2 = imread ( argv[4], CV_LOAD_IMAGE_UNCHANGED );       // 深度图为16位无符号数，单通道图像
-    Mat K = ( Mat_<double> ( 3,3 ) << 520.9, 0, 325.1, 0, 521.0, 249.7, 0, 0, 1 );
+    Mat K = ( Mat_<double> ( 3,3 ) << 520.9, 0, 325.1,
+                                      0, 521.0, 249.7, 
+                                      0, 0, 1 );
     vector<Point3f> pts1, pts2;
-
     for ( DMatch m:matches )
     {
         ushort d1 = depth1.ptr<unsigned short> ( int ( keypoints_1[m.queryIdx].pt.y ) ) [ int ( keypoints_1[m.queryIdx].pt.x ) ];
         ushort d2 = depth2.ptr<unsigned short> ( int ( keypoints_2[m.trainIdx].pt.y ) ) [ int ( keypoints_2[m.trainIdx].pt.x ) ];
-        if ( d1==0 || d2==0 )   // bad depth
+        if ( d1==0 || d2==0 )   // bad depth //深度值为0，无法使用
             continue;
         Point2d p1 = pixel2cam ( keypoints_1[m.queryIdx].pt, K );
         Point2d p2 = pixel2cam ( keypoints_2[m.trainIdx].pt, K );
@@ -184,7 +184,6 @@ int main ( int argc, char** argv )
     cout<<"t_inv = "<<-R.t() *t<<endl;
 
     cout<<"calling bundle adjustment"<<endl;
-
     bundleAdjustment( pts1, pts2, R, t );
 
     // verify p1 = R*p2 + t
@@ -220,13 +219,10 @@ void find_feature_matches ( const Mat& img_1, const Mat& img_2,
 {
     //-- 初始化
     Mat descriptors_1, descriptors_2;
-    // used in OpenCV3
     Ptr<FeatureDetector> detector = ORB::create();
     Ptr<DescriptorExtractor> descriptor = ORB::create();
-    // use this if you are in OpenCV2
-    // Ptr<FeatureDetector> detector = FeatureDetector::create ( "ORB" );
-    // Ptr<DescriptorExtractor> descriptor = DescriptorExtractor::create ( "ORB" );
     Ptr<DescriptorMatcher> matcher  = DescriptorMatcher::create("BruteForce-Hamming");
+
     //-- 第一步:检测 Oriented FAST 角点位置
     detector->detect ( img_1,keypoints_1 );
     detector->detect ( img_2,keypoints_2 );
@@ -269,9 +265,9 @@ void find_feature_matches ( const Mat& img_1, const Mat& img_2,
 
 /**
  * @function pixel2cam
- * @brief 
+ * @brief 像素坐标转相机归一化坐标
  * @param  const Point2d& p, const Mat& K
- * @retval None
+ * @retval Point2d
  */
 Point2d pixel2cam ( const Point2d& p, const Mat& K )
 {
